@@ -10,14 +10,14 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Compiling Java program'
-                bat 'javac src\\com\\tyit\\HelloJenkins.java'
+                sh 'javac src\\com\\tyit\\HelloJenkins.java'
             }
         }
 
         stage('Run') {
             steps {
                 echo 'Running Java program'
-                bat 'java -cp src com.tyit.HelloJenkins'
+                sh 'java -cp src com.tyit.HelloJenkins'
             }
         }
     }
